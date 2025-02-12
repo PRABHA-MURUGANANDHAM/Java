@@ -1,0 +1,26 @@
+class Solution {
+
+    static int search(int arr[], int x) {
+       int max = 0;
+       for(int i = 0;i<arr.length;i++){
+           if(arr[i] == x){
+             return i;
+           }
+       }
+       return -1;
+    }
+    public static void main(String[] args) {
+        // Step 1: Scanner object is created
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  // Step 3: Read 'n' from the user
+
+        // Step 4: Create an array of size 'n'
+        int[] arr = new int[n];
+        int x = sc.nextInt();
+        for (int i = 0; i < n; i++) {  
+            arr[i] = sc.nextInt();  // Step 5: Read 'n' elements from the user
+        }
+        System.out.println(search(arr,x));
+    }
+
+}
