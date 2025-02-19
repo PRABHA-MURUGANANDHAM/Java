@@ -1,0 +1,17 @@
+class Solution {
+    static boolean armstrongNumber(int n) {
+        int sum = 0;
+        String str = Integer.toString(n);
+        for (int i = 0; i < str.length(); i++) { 
+            int sp = Character.getNumericValue(str.charAt(i));
+            double re = Math.pow(sp,str.length());
+            int res = (int) re;
+            sum = sum+res;
+        }
+        if(sum == n){
+        return true;
+        }
+        return false;
+        
+    }
+}
