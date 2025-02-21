@@ -1,0 +1,7 @@
+class Solution {
+    public int lengthOfLastWord(String s) {
+        s = s.trim(); // Remove spaces from the beginning and end
+        int lastSpace = s.lastIndexOf(" "); // Find the last space
+        return s.length() - lastSpace - 1;
+    }
+}
