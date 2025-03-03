@@ -1,0 +1,18 @@
+class Solution {
+    public static int numberofElementsInIntersection(int a[], int b[]) {
+        // Your code here
+        HashSet<Integer> set = new HashSet<>();
+        int n1 = a.length;
+        int n2 = b.length;
+        int count = 0;
+        for(int num: a){
+            set.add(num);
+        }
+        for(int num : b){
+            if(set.contains(num)){
+                count++;
+            }
+        }
+        return count;
+    }
+}
