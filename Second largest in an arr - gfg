@@ -1,0 +1,17 @@
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // Code Here
+        Set<Integer> set = new HashSet<>();
+        
+        for (int num : arr) {
+            set.add(num);
+        }
+        if (set.size() < 2) {
+            return -1; // No second largest element
+        }
+        Integer[] uniq = set.toArray(new Integer[0]);
+        Arrays.sort(uniq);
+        int n = uniq.length;
+        return uniq[n-2];
+    }
+}
